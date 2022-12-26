@@ -1,0 +1,11 @@
+@import "../../sass/variables";
+.header {
+  background: #000;
+  :hover {
+    background: red;
+  }
+  .balo {
+    width: 10000px;
+    background: $balo;
+  }
+}

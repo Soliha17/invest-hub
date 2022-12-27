@@ -79,6 +79,11 @@ input {
   display: flex;
   align-items: center;
 }
+.main{
+  display: flex;
+  gap: 120px;
+  position: relative;
+}
 // FONT CLASSES (first 2 number for font size last two number for line height)
 .f-1215 {
   font-weight: 400;

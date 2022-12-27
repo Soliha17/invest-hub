@@ -1,18 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import Home from "../src/pages/home/Index";
-import Navbar from "../src/components/Navbar/Index";
 
 import "./index.scss";
-import Sidebar from "./components/Sidebar/Index";
+
+import Home from "../src/pages/home/Index";
+import News from "../src/pages/news/Index";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Navbar/>
-      <Sidebar />
+      <News/>
     </BrowserRouter>
   </React.StrictMode>
 );

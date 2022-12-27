@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 
 import { imagePath } from "../../utils/navbarImages";
-import { userLinks } from "../../utils/NavbarUserActions";
+import { userLinks } from "../../utils/navbarUserActions";
 
 function Navbar() {
   const [login, setLogin] = useState(false);

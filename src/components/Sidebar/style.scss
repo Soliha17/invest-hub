@@ -2,9 +2,9 @@
 .sidebar {
   width: 253px;
   padding: 40px 100px 0 100px;
+  gap: 40px;
   flex-direction: column;
   align-items: start;
-  gap: 40px;
   .sidebar__links {
     flex-direction: column;
     align-items: start;
@@ -54,16 +54,16 @@
     padding-top: 20px;
     border-top: 0.5px solid $grey;
     width: 239px;
-    p{
+    p {
       color: $black;
     }
-    p:first-child{
+    p:first-child {
       margin-bottom: 6px;
     }
-    p:nth-child(2){
+    p:nth-child(2) {
       margin-bottom: 10px;
     }
-    .sidebar__social-group{
+    .sidebar__social-group {
       display: flex;
       align-items: center;
       gap: 7px;

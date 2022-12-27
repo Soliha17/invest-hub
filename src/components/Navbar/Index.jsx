@@ -1,49 +1,92 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
 import "./style.scss";
 
-import menuIcon from "../../assets/icons/menu-icon.svg";
-import dropdownIcon from "../../assets/icons/dropdown-icon.svg";
-import plusIcon from "../../assets/icons/plus-icon.svg";
-import searchIcon from "../../assets/icons/search-icon.svg";
-import userIcon from "../../assets/icons/user-icon.svg";
-import investLogo from "../../assets/images/invest-hub-logo.svg";
+import { imagePath } from "../../utils/navbarImages";
+import { userLinks } from "../../utils/NavbarUserActions";
 
 function Navbar() {
+  const [login, setLogin] = useState(false);
+  function onChange() {
+    setLogin(true);
+  }
   return (
     <header className="header wrapper flex">
-      <span className="header__logo-group flex">
-        <button className="menu-btn">
-          <img src={menuIcon} alt="menu-icon" />
-        </button>
-        <img src={investLogo} alt="invest hub logo" />
-      </span>
-      <span className="header__input-group flex">
-        <img src={searchIcon} alt="" />
+      <div className="header__logo-group flex">
+        <img src={imagePath.menuIcon} alt="menu-icon" />
+        <img src={imagePath.investLogo} alt="invest hub logo" />
+      </div>
+      <div className="header__input-group flex">
+        <img src={imagePath.searchIcon} alt="" />
         <input type="text" className="f-1619" placeholder="Izlash..." />
-      </span>
-      <span className="header__action flex">
+      </div>
+      <div className="header__action flex">
         <button className="add-btn flex f-1619">
           Joylashtirish
-          <img src={plusIcon} alt="" />
+          <img src={imagePath.plusIcon} alt="" />
         </button>
-        <span class="dropdown__header">
+        <span className="dropdown__header">
           <button className="flex f-1619">
             O‘zbekcha
-            <img src={dropdownIcon} alt="dropdown icon" />
+            <img src={imagePath.dropdownIcon} alt="dropdown icon" />
           </button>
-          <span class="dropdown-content">
+          <span className="dropdown-content">
             <Link to="">Ruscha</Link>
             <Link to="">Inglizcha</Link>
           </span>
         </span>
-        <button className="login-btn flex f-1619">
-          <img src={userIcon} alt="user icon" />
-          Kirish
-        </button>
-      </span>
+        <span className="login__header">
+          <button className="flex f-1619" onClick={onChange}>
+            <img src={imagePath.userIcon} alt="user icon" />
+            Kirish
+          </button>
+          <span
+            className="login-content"
+            style={login ? { display: "block" } : { display: "none" }}
+          >
+            <img
+              src={imagePath.closeIcon}
+              className="close-icon"
+              alt="close icon"
+              onClick={() => setLogin(!login)}
+            />
+            <span className="profile-info flex">
+              <span className="camere-group flex">
+                <img src={imagePath.camereIcon} alt="camera image" />
+              </span>
+              <span className="info-group">
+                <h6 className="f-1619">Qayum Murtazoyev</h6>
+                <p>+9989 *** ** 99</p>
+              </span>
+            </span>
+            <span className="profile-links flex">
+              {userLinks.map((item) => (
+                <span className="profile-link flex" key={item.id}>
+                  <Link to={item.path} className="link-title flex">
+                    <img src={item.img} alt="saved icon" />
+                    <p className="fs-2024">{item.title}</p>
+                  </Link>
+                  {item.rightImg ? (
+                    <img src={item.rightImg} alt="right arrow icon" />
+                  ) : item.rightImg === false ? (
+                    ""
+                  ) : (
+                    <>
+                      <input type="checkbox" className="switch-input" id="switch" />
+                      <label htmlFor="switch" className="switch-label">Toggle</label>
+                    </>
+                  )}
+                </span>
+              ))}
+            </span>
+          </span>
+        </span>
+      </div>
     </header>
   );
 }
-
+{
+  /* <input type="checkbox" id="switch" /><label for="switch">Toggle</label> */
+}
 export default Navbar;

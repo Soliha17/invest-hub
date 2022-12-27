@@ -54,9 +54,9 @@ function NewsMain() {
             <h4 className="f-2431">{item.newsTitle}</h4>
             <p className="f-2024">{item.newsText}</p>
           </span>
-          <span className="news__img">
+          <Link className="news__img">
             <img src={item.img} alt="" />
-          </span>
+          </Link>
           <span className="footer__news-main flex">
             <div className="left__footer flex">
               <p className="flex">

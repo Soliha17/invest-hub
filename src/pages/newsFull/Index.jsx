@@ -1,12 +1,11 @@
 import React from "react";
-
+import Navbar from "../../components/Navbar/Index";
 import NewsFeed from "../../components/NewsFeed/Index";
 import Sidebar from "../../components/Sidebar/Index";
-import NewsMain from "../../components/NewsMain/Index";
-
-function News() {
+function NewsFull() {
   return (
-    <div className="wrapper">
+    <>
+      <Navbar />
       <div className="main">
         <Sidebar />
         <div className="main-full">
@@ -14,8 +13,8 @@ function News() {
           <NewsMain />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
-export default News;
+export default NewsFull;

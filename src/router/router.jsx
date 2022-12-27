@@ -1,7 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+
 import { navbarUtils } from "../utils/navbar";
-import Navbar from "../components/Navbar";
+
+import Navbar from "../components/Navbar/Index";
+
 console.log(navbarUtils, "navc");
 const Rout = () => {
   return (

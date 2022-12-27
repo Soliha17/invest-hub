@@ -12,6 +12,7 @@ import tashkentImg from "../assets/images/tashkent.png";
 export const newsInfos = [
   {
     id: 1,
+    path:'/',
     logoImg: daryoIcon,
     newsDate: "02.08.2022 14:32",
     newsType: "Gazeta va jurnal",
@@ -23,6 +24,7 @@ export const newsInfos = [
   },
   {
     id: 2,
+    path:'/',
     logoImg: kunuzImg,
     newsDate: "02.08.2022  14:36",
     newsType: "Gazeta va jurnal",
@@ -34,6 +36,7 @@ export const newsInfos = [
   },
   {
     id: 3,
+    path:'/',
     logoImg: uzaImg,
     newsDate: "02.08.2022  14:36",
     newsType: "Gazeta va jurnal",
@@ -45,6 +48,7 @@ export const newsInfos = [
   },
   {
     id: 4,
+    path:'/',
     logoImg: cbuImg,
     newsDate: "02.08.2022  14:36",
     newsType: "Kriptovalyuta",
@@ -56,6 +60,7 @@ export const newsInfos = [
   },
   {
     id: 5,
+    path:'/',
     logoImg: itparkImg,
     newsDate: "02.08.2022  14:36",
     newsType: "IT",
@@ -66,6 +71,7 @@ export const newsInfos = [
   },
   {
     id: 6,
+    path:'/',
     logoImg: cbuImg,
     newsDate: "02.08.2022  14:36",
     newsType: "Kriptovalyuta",

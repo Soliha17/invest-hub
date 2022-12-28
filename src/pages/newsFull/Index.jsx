@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 import Sidebar from "../../components/Sidebar/Index";
 import { newsInfos } from "../../utils/newsInfo";
@@ -19,28 +19,39 @@ import threeDotsIcon from "../../assets/icons/three-dots-icon.svg";
 import watchIcon from "../../assets/icons/small-watch-icon.svg";
 import fullHeartIcon from "../../assets/icons/full-heart-icon.svg";
 import noComment from "../../assets/images/no-comment.svg";
+import backIcon from "../../assets/icons/back-icon.svg";
+
 
 function NewsFull() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [dots, setDots] = useState(false);
-  const [openComments, setOpenComments] = useState(false);
-  function openCommentsFn() {
-    setOpenComments(!openComments);
-  }
-
   const [news, setNews] = useState([]);
+  const [openComments, setOpenComments] = useState(false);
   useEffect(() => {
     let result = newsInfos.filter((item) => {
       return item.id == id;
     });
     setNews(result);
   }, []);
+
+  function openCommentsFn() {
+    setOpenComments(!openComments);
+  }
+
+  function goBack() {
+    navigate(-1);
+  }
+
   return (
     <>
       <div className="main wrapper">
         <Sidebar />
         <div className="main-full">
           <div className="news-main news-full-main">
+            <span className="back-group" onClick={goBack}>
+              <img src={backIcon} alt="" />
+            </span>
             {news.map((item) => (
               <span className="new" key={item.id}>
                 <span className="top__news-main flex">
@@ -86,8 +97,8 @@ function NewsFull() {
                   <img src={item.img} alt="" />
                 </Link>
                 <span className="full-text-box">
-                  {item.fullInfo.split("\n").map((text) => (
-                    <p className="full-text f-2024">{text}</p>
+                  {item.fullInfo.split("\n").map((text,index) => (
+                    <p className="full-text f-2024" key={index}>{text}</p>
                   ))}
                 </span>
                 <span className="footer__news-main flex">
@@ -130,9 +141,9 @@ function NewsFull() {
               ></textarea>
               <button className="send-btn f-1619">Yuborish</button>
               <span className="comments-box">
-                {commentsData.length>0 ? (
+                {commentsData.length > 0 ? (
                   commentsData.map((comment) => (
-                    <span className="comment">
+                    <span className="comment" key={comment.id}>
                       <span className="top__comment flex">
                         <img src={comment.profileImg} alt="" />
                         <span className="profile-info">

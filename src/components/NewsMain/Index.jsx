@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { v4 as uuid } from "uuid";
 
 import "./style.scss";
 
@@ -14,7 +15,6 @@ import plusIcon from "../../assets/icons/kvd-plus-icon.svg";
 import threeDotsIcon from "../../assets/icons/three-dots-icon.svg";
 import watchIcon from "../../assets/icons/small-watch-icon.svg";
 import { newsInfos } from "../../utils/newsInfo";
-
 function NewsMain() {
   const [dots, setDots] = useState(false);
   const navigate = useNavigate();

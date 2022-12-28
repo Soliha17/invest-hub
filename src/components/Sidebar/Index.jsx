@@ -14,7 +14,7 @@ function Sidebar() {
     <div className="sidebar flex">
       <span className="sidebar__links flex">
         {sidebarLinks.map((item) => (
-          <Link to={item.path} className="sidebar__link flex">
+          <Link to={item.path} key={item.id} className="sidebar__link flex">
             <img src={item.img} alt={item.title} />
             <p className="f-2024">{item.title}</p>
           </Link>
@@ -23,7 +23,7 @@ function Sidebar() {
       <span className="sidebar__pages">
         <h4 className="f-2024">Sahifalar</h4>
         {sidebarPagesLinks.map((item) => (
-          <Link className="sidebar__page flex">
+          <Link key={item.id} className="sidebar__page flex">
             <img src={item.img} alt="" />
             <p className="f-2024">{item.title}</p>
           </Link>
@@ -34,7 +34,7 @@ function Sidebar() {
         <p className="f-1619">Biz bilan bog'lanish</p>
         <span className="sidebar__social-group">
           {sidebarSocialImages.map((item) => (
-            <img src={item.img} />
+            <img src={item.img} key={item.id} />
           ))}
         </span>
       </span>

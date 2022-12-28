@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,Outlet } from "react-router-dom";
 
 import "./style.scss";
 
@@ -12,6 +12,7 @@ function Navbar() {
     setLogin(true);
   }
   return (
+    <>
     <header className="header wrapper flex">
       <div className="header__logo-group flex">
         <img src={imagePath.menuIcon} alt="menu-icon" />
@@ -84,9 +85,8 @@ function Navbar() {
         </span>
       </div>
     </header>
+      <Outlet/>
+    </>
   );
-}
-{
-  /* <input type="checkbox" id="switch" /><label for="switch">Toggle</label> */
 }
 export default Navbar;

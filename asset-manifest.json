@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/invest-hub/static/css/main.608a3220.css",
-    "main.js": "/invest-hub/static/js/main.e298b762.js",
+    "main.js": "/invest-hub/static/js/main.4a88790c.js",
     "static/media/dollar-img.svg": "/invest-hub/static/media/dollar-img.ad12d2eab956a390f3b5352082fe91fa.svg",
     "static/media/tashkent.png": "/invest-hub/static/media/tashkent.5795bf8522869881eb39.png",
     "static/media/meeting.png": "/invest-hub/static/media/meeting.a110f7d10d4c0fed5d22.png",
@@ -79,10 +79,10 @@
     "static/media/dropdown-icon.svg": "/invest-hub/static/media/dropdown-icon.cb7a2c9b876d233a7939f5d85d6c2925.svg",
     "static/media/menu-icon.svg": "/invest-hub/static/media/menu-icon.a45a8e2e0846695d7faeb702ee2ec279.svg",
     "main.608a3220.css.map": "/invest-hub/static/css/main.608a3220.css.map",
-    "main.e298b762.js.map": "/invest-hub/static/js/main.e298b762.js.map"
+    "main.4a88790c.js.map": "/invest-hub/static/js/main.4a88790c.js.map"
   },
   "entrypoints": [
     "static/css/main.608a3220.css",
-    "static/js/main.e298b762.js"
+    "static/js/main.4a88790c.js"
   ]
 }

@@ -50,7 +50,7 @@ function Sidebar() {
         <p className="f-1619">Biz bilan bog'lanish</p>
         <span className="sidebar__social-group">
           {sidebarSocialImages.map((item) => (
-            <img src={item.img} key={item.id} />
+            <img src={item.img} key={item.id} alt=" just " />
           ))}
         </span>
       </span>

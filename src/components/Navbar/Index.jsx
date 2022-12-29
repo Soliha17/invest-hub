@@ -54,7 +54,7 @@ function Navbar() {
             />
             <span className="profile-info flex">
               <span className="camere-group flex">
-                <img src={imagePath.camereIcon} alt="camera image" />
+                <img src={imagePath.camereIcon} alt="camera" />
               </span>
               <span className="info-group">
                 <h6 className="f-1619">Qayum Murtazoyev</h6>

@@ -34,7 +34,7 @@ function Navbar() {
           </button>
           <span className="dropdown-content">
             <Link to="">Ruscha</Link>
-            <Link to="">Inglizcha</Link>
+            <Link to="">Ingliz</Link>
           </span>
         </span>
         <span className="login__header">
